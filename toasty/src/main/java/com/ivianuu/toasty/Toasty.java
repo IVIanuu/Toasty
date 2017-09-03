@@ -76,160 +76,274 @@ public final class Toasty {
     }
 
     // NORMAL
+
+    /**
+     * Shows a normal toast
+     */
     public static void normal(@StringRes int messageRes) {
         normal(context.getString(messageRes));
     }
 
+    /**
+     * Shows a normal toast
+     */
     public static void normal(@NonNull CharSequence message) {
         normal(message, Toast.LENGTH_SHORT, null, false);
     }
 
+    /**
+     * Shows a normal toast
+     */
     public static void normal(@StringRes int messageRes, Drawable icon) {
         normal(context.getString(messageRes, icon));
     }
 
+    /**
+     * Shows a normal toast
+     */
     public static void normal(@NonNull CharSequence message, Drawable icon) {
         normal(message, Toast.LENGTH_SHORT, icon, true);
     }
 
+    /**
+     * Shows a normal toast
+     */
     public static void normal(@StringRes int messageRes, int duration) {
         normal(context.getString(messageRes), duration);
     }
-    
+
+    /**
+     * Shows a normal toast
+     */
     public static void normal(@NonNull CharSequence message, int duration) {
         normal(message, duration, null, false);
     }
 
+    /**
+     * Shows a normal toast
+     */
     public static void normal(@StringRes int messageRes, int duration,
                               Drawable icon) {
         normal(context.getString(messageRes, duration, icon));
     }
 
+    /**
+     * Shows a normal toast
+     */
     public static void normal(@NonNull CharSequence message, int duration,
                                Drawable icon) {
         normal(message, duration, icon, true);
     }
 
+    /**
+     * Shows a normal toast
+     */
     public static void normal(@StringRes int messageRes, int duration,
                               Drawable icon, boolean withIcon) {
         normal(context.getString(messageRes, duration, icon, withIcon));
     }
 
+    /**
+     * Shows a normal toast
+     */
     public static void normal(@NonNull CharSequence message, int duration,
                                Drawable icon, boolean withIcon) {
         custom(message, icon, NORMAL_COLOR, duration, withIcon, true);
     }
 
     // WARNING
+
+    /**
+     * Shows a warning toast
+     */
     public static void warning(@StringRes int messageRes) {
         warning(context.getString(messageRes), Toast.LENGTH_SHORT, true);
     }
 
+    /**
+     * Shows a warning toast
+     */
     public static void warning(@NonNull CharSequence message) {
         warning(message, Toast.LENGTH_SHORT, true);
     }
 
+    /**
+     * Shows a warning toast
+     */
     public static void warning(@StringRes int messageRes, int duration) {
         warning(context.getString(messageRes), duration);
     }
 
+    /**
+     * Shows a warning toast
+     */
     public static void warning(@NonNull CharSequence message, int duration) {
         warning(message, duration, true);
     }
 
+    /**
+     * Shows a warning toast
+     */
     public static void warning(@StringRes int messageRes, int duration, boolean withIcon) {
         warning(context.getString(messageRes), duration, withIcon);
     }
 
+    /**
+     * Shows a warning toast
+     */
     public static void warning(@NonNull CharSequence message, int duration, boolean withIcon) {
         custom(message, ToastyUtils.getDrawable(R.drawable.ic_error_outline_white_48dp),
                 WARNING_COLOR, duration, withIcon, true);
     }
 
     // INFO
+
+    /**
+     * Shows a info toast
+     */
     public static void info(@StringRes int messageRes) {
         info(context.getString(messageRes));
     }
 
+    /**
+     * Shows a info toast
+     */
     public static void info(@NonNull CharSequence message) {
         info(message, Toast.LENGTH_SHORT, true);
     }
 
+    /**
+     * Shows a info toast
+     */
     public static void info(@StringRes int messageRes, int duration) {
         info(context.getString(messageRes), duration);
     }
 
+    /**
+     * Shows a info toast
+     */
     public static void info(@NonNull CharSequence message, int duration) {
         info(message, duration, true);
     }
 
+    /**
+     * Shows a info toast
+     */
     public static void info(@StringRes int messageRes, int duration, boolean withIcon) {
         info(context.getString(messageRes), duration, withIcon);
     }
 
+    /**
+     * Shows a info toast
+     */
     public static void info(@NonNull CharSequence message, int duration, boolean withIcon) {
         custom(message, ToastyUtils.getDrawable(R.drawable.ic_info_outline_white_48dp),
                 INFO_COLOR, duration, withIcon, true);
     }
 
     // SUCCESS
+
+    /**
+     * Shows a success toast
+     */
     public static void success(@StringRes int messageRes) {
         success(context.getString(messageRes));
     }
 
+    /**
+     * Shows a success toast
+     */
     public static void success(@NonNull CharSequence message) {
         success(message, Toast.LENGTH_SHORT, true);
     }
 
+    /**
+     * Shows a success toast
+     */
     public static void success(@StringRes int messageRes, int duration) {
         success(context.getString(messageRes), duration);
     }
-    
+
+    /**
+     * Shows a success toast
+     */
     public static void success(@NonNull CharSequence message, int duration) {
         success(message, duration, true);
     }
 
+    /**
+     * Shows a success toast
+     */
     public static void success(@StringRes int messageRes, int duration, boolean withIcon) {
         success(context.getString(messageRes), duration, withIcon);
     }
 
+    /**
+     * Shows a success toast
+     */
     public static void success(@NonNull CharSequence message, int duration, boolean withIcon) {
         custom(message, ToastyUtils.getDrawable(R.drawable.ic_check_white_48dp),
                 SUCCESS_COLOR, duration, withIcon, true);
     }
     
     // ERROR
+
+    /**
+     * Shows a error toast
+     */
     public static void error(@StringRes int messageRes) {
         error(context.getString(messageRes));
     }
 
+    /**
+     * Shows a error toast
+     */
     public static void error(@NonNull CharSequence message) {
         error(message, Toast.LENGTH_SHORT, true);
     }
 
+    /**
+     * Shows a error toast
+     */
     public static void error(@StringRes int messageRes, int duration) {
         error(context.getString(messageRes), duration);
     }
 
+    /**
+     * Shows a error toast
+     */
     public static void error(@NonNull CharSequence message, int duration) {
         error(message, duration, true);
     }
 
+    /**
+     * Shows a error toast
+     */
     public static void error(@StringRes int messageRes, int duration, boolean withIcon) {
         error(context.getString(messageRes), duration, withIcon);
     }
 
+    /**
+     * Shows a error toast
+     */
     public static void error(@NonNull CharSequence message, int duration, boolean withIcon) {
         custom(message, ToastyUtils.getDrawable(R.drawable.ic_clear_white_48dp),
                 ERROR_COLOR, duration, withIcon, true);
     }
 
     // CUSTOM
+
+    /**
+     * Shows a custom toast
+     */
     public static void custom(@NonNull CharSequence message, Drawable icon,
                                int duration, boolean withIcon) {
         custom(message, icon, -1, duration, withIcon, false);
     }
 
+    /**
+     * Shows a custom toast
+     */
     public static void custom(@NonNull CharSequence message, @DrawableRes int iconRes,
                                @ColorInt int tintColor, int duration,
                                boolean withIcon, boolean shouldTint) {
@@ -237,6 +351,9 @@ public final class Toasty {
                 tintColor, duration, withIcon, shouldTint);
     }
 
+    /**
+     * Shows a custom toast
+     */
     public static void custom(@NonNull final CharSequence message, final Drawable icon,
                               @ColorInt final int tintColor, final int duration,
                               final boolean withIcon, final boolean shouldTint) {
